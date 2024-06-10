@@ -1,7 +1,7 @@
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('.btn,.btno ,.btne , .btnc');
 
-let result = '';
+let result = '0';
 
 document.addEventListener('keydown', handleKeyPress);
 
@@ -11,22 +11,14 @@ function handleKeyPress(event) {
   switch (key) {
     case 'c':
     case 'C':
-      display.value = '';
-      result = '';
+      clearDisplay();
       break;
     case 'Backspace':
-      display.value = display.value.slice(0, -1);
-      result = result.slice(0, -1);
+      deleteLastChar();
       break;
     case 'Enter':
     case '=':
-      try {
-        result = eval(result);
-        display.value = result;
-      } catch (error) {
-        display.value = 'Error';
-        result = '';
-      }
+     calculateResult();
       break;
     case '0':
     case '1':
@@ -43,10 +35,8 @@ function handleKeyPress(event) {
     case '*':
     case '/':
     case '.':
-      display.value += key;
-      result += key;
+      appendToDisplay(key);
       break;
-      
     default:
       break;
   }
@@ -57,32 +47,50 @@ buttons.forEach(button => {
     const value = button.id;
 
     if (value === 'c') {
-      display.value = '';
-      result = '';
+     clearDisplay();
     } else if (value === 'ce') {
-      display.value = '';
+      clearDisplay();
     } else if (value === 'back') {
-      display.value = display.value.slice(0, -1);
-      result = result.slice(0, -1);
+      deleteLastChar();
     } else if (value === '=') {
-      try {
-        result = eval(result);
-        display.value = result;
-      } catch (error) {
-        display.value = 'Error';
-        result = '0';
-      }
-    } else {
-      display.value += value;
-      result += value;
-    }
+      calculateResult();
+      else{
+      appendToDisplay(value);
+    } 
   });
 });
 
-
 function appendToDisplay(value) {
-  display.value += value;
+  if (display.value === '0'){
+    display.value= = value;
+  } else {
+    display.value += vaue;
+  }
   result += value;
 }
+
+function clearDisplay() {
+  display.value ='0';
+  result = '0';
+}
+function deleteLastChar() {
+  display.value = display.value.slice(0, -1);
+  result = result.slice(0,-1);
+  if (display.value === ''){
+    display.value ='0';
+  }
+}
+
+function calculateResult() {
+  try {
+    const calculatedResult = eval(result);
+    display.value = calculatedResult;
+    result = calculatedResult.toString();
+  } catch (error) {
+    display.value = 'Error';
+    result = '0';
+  }
+}
+    
 
 
