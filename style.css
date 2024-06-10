@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background-color: #D9D9D9;
+  padding: 20px;
+  border-radius: 22px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 546px;
+  height: 924px;
+  padding-top: 300px;
+}
+
+.display {
+  margin-bottom: 20px;
+
+}
+
+#display {
+  width: 498px;
+  height: 122px;
+  padding: 5px;
+  font-size: 48px;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  background-color: #312b2b;
+  text-align: right;
+  padding-left: 38px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  grid-row-gap: 35px;
+  grid-template-rows: 1.5fr;
+  padding-left: 38px;
+}
+
+
+.btn {
+  padding: 15px;
+  font-size: 48px;
+  border: none;
+  border-radius: 13px;
+  background-color: gray;
+  color: #ffffff;
+  cursor: pointer;
+  width: 96px;
+  height: 117px;
+
+}
+
+.btno {
+  padding: 15px;
+  width: 96px;
+  height: 117px;
+  font-size: 48px;
+  border: none;
+  border-radius: 13px;
+  background-color: hwb(41 5% 4%);
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+.btnc {
+  grid-column: 1 / -1;
+  margin-left: 78%;
+  height: 80px;
+  padding: 15px;
+  font-size: 48px;
+  border: none;
+  border-radius: 13px;
+  background-color: red;
+  color: #ffffff;
+  cursor: pointer;
+  width: 96px;
+  height: 117px;
+
+
+}
+
+.btne {
+  width: 96px;
+  height: 117px;
+  padding: 15px;
+  font-size: 48px;
+  border: none;
+  border-radius: 13px;
+  background-color: #45a049;
+  color: #ffffff;
+  cursor: pointer;
+
+}
+
+
+.btn:hover {
+  background-color: #af622e;
+}
+
+.btno:hover {
+  background-color: #af622e;
+}
+
+.btne:hover {
+  background-color: #af622e;
+}
+
+.btnc:hover {
+  background-color: #af622e;
+}
+
+.btn:active {
+  background-color: #3e8e41;
+}
+
+.btno:active {
+  background-color: #3e8e41;
+}
+
+.btnc:active {
+  background-color: #3e8e41;
+}
+
+.btne:active {
+  background-color: #af622e;
+}
+
+
+
+.btnc {
+  grid-column: 1 / -1;
+}
