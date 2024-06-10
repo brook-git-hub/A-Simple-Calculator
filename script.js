@@ -70,7 +70,7 @@ buttons.forEach(button => {
         display.value = result;
       } catch (error) {
         display.value = 'Error';
-        result = '';
+        result = '0';
       }
     } else {
       display.value += value;
