@@ -1,3 +1,4 @@
-Group Members               ID NUmber
-Tsinat Albachew            Ugr/22601/13
-Biruk Kebede               Ugr/22657/13
+Group Members Tsinat Albachew     Biruk Kebede
+ID NUmber      Ugr/22601/13       Ugr/22657/13    
+           
+              
